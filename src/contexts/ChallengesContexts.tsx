@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import { LevelUpModal } from '@components/LevelUpModal';
 import Cookies from 'js-cookie';
 import { createContext, ReactNode, useEffect, useState } from 'react';
@@ -39,7 +40,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
-  const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+  const experienceToNextLevel = ((level + 1) * 4) ** 2; // Math.pow
 
   useEffect(() => {
     Notification.requestPermission();

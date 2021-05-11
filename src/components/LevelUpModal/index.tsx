@@ -1,12 +1,14 @@
+// eslint-disable-next-line import/no-cycle
 import { ChallengeContext } from '@contexts/ChallengesContexts';
-import styles from '@styles-components/LevelUpModal.module.css';
 import { useContext } from 'react';
+
+import { Container, Overlay } from './styles';
 
 export function LevelUpModal() {
   const { level, closeLevelUpModal } = useContext(ChallengeContext);
   return (
-    <div className={styles.overlay}>
-      <div className={styles.container}>
+    <Overlay>
+      <Container>
         <header>{level}</header>
         <strong>Parabens</strong>
         <p>Voce alcancou um novo level.</p>
@@ -14,7 +16,7 @@ export function LevelUpModal() {
         <button type="button" onClick={closeLevelUpModal}>
           <img src="/icons/close.svg" alt="close icon" />
         </button>
-      </div>
-    </div>
+      </Container>
+    </Overlay>
   );
 }

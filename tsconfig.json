@@ -24,6 +24,7 @@
       "@styles-pages/*": ["./styles/pages/*"],
       "@styles-components/*": ["./styles/components/*"],
       "@contexts/*": ["./contexts/*"],
+      "@test-utils": ["./modules/test-utils.tsx"],
     }
   },
   "include": [

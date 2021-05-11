@@ -45,13 +45,6 @@ export default function Home({ challengesCompleted, currentExperience, level }: 
 }
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
-  // chamada API
-  const user = {
-    lelve: 1,
-    currentExperience: 50,
-    completedChallenges: 2,
-  };
-
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
 
   return {

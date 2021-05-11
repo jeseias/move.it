@@ -9,20 +9,28 @@
     "type-check": "tsc --pretty --noEmit",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint:css": "stylelint **/*.{js,ts,tsx}",
-    "format": "prettier --write **/*.{js,ts,tsx}"
+    "format": "prettier --write **/*.{js,ts,tsx}",
+    "test": "TZ=UTC jest"
   },
   "dependencies": {
     "js-cookie": "^2.2.1",
     "next": "10.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.8",
+    "@types/jest": "^26.0.23",
     "@types/js-cookie": "^2.2.6",
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "babel-jest": "^26.6.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.2.0",
@@ -33,6 +41,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^26.6.3",
+    "jest-watch-typeahead": "^0.6.3",
     "prettier": "^2.2.1",
     "stylelint": "^13.12.0",
     "stylelint-config-recommended": "^4.0.0",
