@@ -12,9 +12,10 @@ module.exports = {
     "@styles/(.*)": "<rootDir>/src/styles/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",
     "@pages/(.*)": "<rootDir>/src/pages/$1",
+    "@views/(.*)": "<rootDir>/src/views/$1",
     "@contexts/(.*)": "<rootDir>/src/contexts/$1",
     "@styles-components/(.*)": "<rootDir>/src/styles/components/$1",
-    "@styles-pages/(.*)": "<rootDir>/src/styles/pages/$1"
+    "@styles-pages/(.*)": "<rootDir>/src/styles/pages/$1",
     // '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     // '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/__test__/__mocks__/fileMock.js',
     // "@design-system": "<rootDir>/modules/design-system",

@@ -21,6 +21,8 @@
     "paths": {
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
+      "@views/*": ["./views/*"],
+      "@styles/*": ["./styles/*"],
       "@styles-pages/*": ["./styles/pages/*"],
       "@styles-components/*": ["./styles/components/*"],
       "@contexts/*": ["./contexts/*"],

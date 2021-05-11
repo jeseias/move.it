@@ -9,6 +9,8 @@
         "map": [
           ["@components", "./src/components"],
           ["@pages", "./src/pages"],
+          ["@views", "./src/views"],
+          ["@styles", "./src/styles"],
           ["@styles-pages", "./src/styles/pages"],
           ["@styles-components", "./src/styles/components"],
           ["@contexts", "./src/contexts"],

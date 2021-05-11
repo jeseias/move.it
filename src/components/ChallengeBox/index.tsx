@@ -44,7 +44,7 @@ export default function ChallengeBox() {
         </ChallengeActive>
       ) : (
         <ChallengeNotActive>
-          <strong>Finalize um ciclu para receber um desafio</strong>
+          <strong>Finalize um ciclo para receber um desafio</strong>
           <p>
             <img src="" alt="level up" />
             Avance de level completando desafios
