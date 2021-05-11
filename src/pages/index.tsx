@@ -7,7 +7,9 @@ interface HomeProps {
   challengesCompleted: number;
 }
 
-export default (props: HomeProps) => <Home {...props} />;
+const HomePage = (props: HomeProps) => <Home {...props} />;
+
+export default HomePage;
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;

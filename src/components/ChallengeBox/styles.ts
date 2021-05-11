@@ -35,8 +35,9 @@ export const ChallengeNotActive = styled.div`
     max-width: 70%;
     margin-top: 2rem;
 
-    img {
-      margin-bottom: 1rem;
+    svg {
+      margin-bottom: 2rem;
+      color: var(--green);
     }
   }
 `;
@@ -66,6 +67,10 @@ export const ChallengeActive = styled.div`
       font-size: 2rem;
       color: var(--title);
       margin: 1.5rem 0 1rem;
+    }
+
+    svg {
+      color: var(--blue-twitter);
     }
   }
 

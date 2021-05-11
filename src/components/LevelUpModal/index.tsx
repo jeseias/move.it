@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-cycle
 import { ChallengeContext } from '@contexts/ChallengesContexts';
 import { useContext } from 'react';
+import { MdClose } from 'react-icons/md';
 
 import { Container, Overlay } from './styles';
 
@@ -14,7 +15,7 @@ export function LevelUpModal() {
         <p>Voce alcancou um novo level.</p>
 
         <button type="button" onClick={closeLevelUpModal}>
-          <img src="/icons/close.svg" alt="close icon" />
+          <MdClose size={25} />
         </button>
       </Container>
     </Overlay>

@@ -14,7 +14,7 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  background: var(--var);
+  background: var(--white);
   width: 100%;
   max-width: 400px;
   padding: 2rem;
@@ -27,8 +27,6 @@ export const Container = styled.div`
     font-size: 8.75rem;
     font-weight: 600;
     color: var(--blue);
-    background: url('/icon/levelup.svg') no-repeat center;
-    background-size: contain;
   }
 
   strong {
@@ -44,5 +42,9 @@ export const Container = styled.div`
     background: transparent;
     border: 0;
     font-size: 0px;
+
+    svg {
+      color: var(--title);
+    }
   }
 `;
