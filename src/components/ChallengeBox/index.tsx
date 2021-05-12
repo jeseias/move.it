@@ -25,33 +25,33 @@ export default function ChallengeBox() {
     <Container>
       {activeChallenge ? (
         <ChallengeActive>
-          <header>Ganhe {activeChallenge.amount} xp</header>
+          <header>Win {activeChallenge.amount} xp</header>
           <main>
             {activeChallenge.type === 'body' && <CgGym size={60} />}
             {activeChallenge.type === 'eye' && <ImEye size={60} />}
-            <strong>Novo desafio</strong>
+            <strong>New Challenge</strong>
             <p>{activeChallenge.description}</p>
           </main>
 
           <footer>
             <button className="challengeFailedButton" type="button" onClick={handleFunctionFailed}>
-              Falhei
+              Failed
             </button>
             <button
               className="challengeSucceededButton"
               type="button"
               onClick={handleFunctionSucceeded}
             >
-              Completei
+              Completed
             </button>
           </footer>
         </ChallengeActive>
       ) : (
         <ChallengeNotActive>
-          <strong>Finalize um ciclo para receber um desafio</strong>
+          <strong>Finalize a cycle to receive a challenge</strong>
           <p>
-            <FaArrowAltCircleUp size={50} />
-            Avance de level completando desafios
+            <FaArrowAltCircleUp size={50} role="img" />
+            Go up a level by completing challenges
           </p>
         </ChallengeNotActive>
       )}

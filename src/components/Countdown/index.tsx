@@ -27,7 +27,7 @@ export default function Countdown() {
 
       {hasFinished ? (
         <CountdownButton type="button" disabled>
-          Ciculo encerrado
+          Cycle complete
         </CountdownButton>
       ) : (
         <>
@@ -41,7 +41,7 @@ export default function Countdown() {
             </CountdownButtonActive>
           ) : (
             <CountdownButton type="button" onClick={startCountdown}>
-              Iniciar um Ciculo
+              Initialize cycle
             </CountdownButton>
           )}
         </>

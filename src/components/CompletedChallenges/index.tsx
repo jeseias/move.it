@@ -5,9 +5,10 @@ import { Container } from './styles';
 
 export default function CompletedChallenges() {
   const { challengesCompleted } = useContext(ChallengeContext);
+
   return (
     <Container>
-      <span>Desafios completos</span>
+      <span>Completed Challenges</span>
       <span>{challengesCompleted}</span>
     </Container>
   );
