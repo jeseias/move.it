@@ -1,45 +1,53 @@
-import ChallengeBox from '@components/ChallengeBox';
-import CompletedChallenges from '@components/CompletedChallenges';
-import Countdown from '@components/Countdown';
-import ExperienceBar from '@components/ExperienceBar';
-import Profile from '@components/Profile';
-import { ChallengesProvider } from '@contexts/ChallengesContexts';
-import { CountdownProvider } from '@contexts/CountdownContext';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { MdInput } from 'react-icons/md';
 
+import { ICurrentUser } from './home.types';
 import { Container } from './styles';
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
+export default function Home() {
+  const [userName, setUserName] = useState('');
+  const router = useRouter();
 
-export default function Home({ challengesCompleted, currentExperience, level }: HomeProps) {
+  async function loginUser() {
+    try {
+      const response = await axios(`https://api.github.com/users/${userName}`);
+      const { data } = response;
+
+      const { login, name } = data;
+
+      const currentUser: ICurrentUser = { login, name };
+
+      Cookies.set('currentUser', JSON.stringify(currentUser));
+      router.push('/app');
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
-    <ChallengesProvider
-      level={level}
-      currentExperience={currentExperience}
-      challengesCompleted={challengesCompleted}
-    >
-      <Container>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
-        <ExperienceBar />
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </Container>
-    </ChallengesProvider>
+    <Container>
+      <Head>
+        <title>Inicio | login</title>
+      </Head>
+      <main>
+        <h2>Welcome to move.it</h2>
+        <div className="input">
+          <input
+            type="text"
+            placeholder="GITHUB USER NAME"
+            value={userName}
+            onChange={e => setUserName(e.target.value)}
+          />
+          <button type="button" onClick={loginUser}>
+            <MdInput size={30} />
+          </button>
+        </div>
+        <p>Develop by JESEIAS</p>
+      </main>
+    </Container>
   );
 }

@@ -33,13 +33,14 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+
   body {
     background: var(--background);
     color: var(--text);
   }
 
   body, input, textarea, button {
-    font: 400 1rem "Inter", sans-serif;
+    font: 400 2rem "Inter", sans-serif;
   }
 
   button {
