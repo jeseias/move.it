@@ -1,6 +1,7 @@
 import { CountdownContext } from '@contexts/CountdownContext';
 import { useContext } from 'react';
 
+import { formatTime } from './countdown-helper';
 import { Container, CountdownButton, CountdownButtonActive } from './styles';
 
 export default function Countdown() {
@@ -8,8 +9,8 @@ export default function Countdown() {
     CountdownContext
   );
 
-  const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
-  const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
+  const [minuteLeft, minuteRight] = formatTime(minutes);
+  const [secondLeft, secondRight] = formatTime(seconds);
 
   return (
     <div>
@@ -37,11 +38,11 @@ export default function Countdown() {
               className="countdownButtonActive"
               onClick={resetCountdown}
             >
-              Abandonar ciclo
+              End Cycle
             </CountdownButtonActive>
           ) : (
             <CountdownButton type="button" onClick={startCountdown}>
-              Initialize cycle
+              Initialize Cycle
             </CountdownButton>
           )}
         </>
