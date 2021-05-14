@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 style="text-align: center; font-size: 50px; color: #5965E0;">move.it</h1>
 
-## Getting Started
+![](.Github/app.png)
 
-First, run the development server:
+## This app was created for learning purposes, on course named __NLW__ (Next Level Week) by [_@rocketseat_](https://www.rocketseat.com.br).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# App purpose
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### This application __aims__ help __developers__, take care of their __health__, since we spend so much time __coding__, while __sitting__, staring at the __screen__ for a very ling time.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### This app __reminds__ us after 25 minutes, to take a __break__, and do a variety of __exercises__, on the eyes, neck, fingers, etc...
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br>
 
-## Learn More
+# Features 
+>- ### __Experience bar__  
+>- ### __Countdown timer__ 
+>- ### __Levels__ 
+>- ### __Notifications__ 
+>- ### __Simple Authentication with (using github username)__ 
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Technologies used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> ### 1. __Next.JS__
+> ### 2. __REACTJS__
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Concepts used in in this application
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> ### 1. __Context API__
+> ### 2. __getServerSideProps__
+> ### 3. __Styled-components__
+> ### 4. __Audio API__
+> ### 5. __Notification API__
+> ### 6. __Test with Jest__
+> ### 7. __TypeScript__
+
+<br>
+
+# Development 
+
+> ### 1. __Eslint__
+> ### 2. __Prettier__ 
