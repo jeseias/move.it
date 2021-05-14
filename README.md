@@ -8,41 +8,41 @@
 
 # App purpose
 
-### This application __aims__ help __developers__, take care of their __health__, since we spend so much time __coding__, while __sitting__, staring at the __screen__ for a very ling time.
+#### This application __aims__ help __developers__, take care of their __health__, since we spend so much time __coding__, while __sitting__, staring at the __screen__ for a very ling time.
 
-### This app __reminds__ us after 25 minutes, to take a __break__, and do a variety of __exercises__, on the eyes, neck, fingers, etc...
+#### This app __reminds__ us after 25 minutes, to take a __break__, and do a variety of __exercises__, on the eyes, neck, fingers, etc...
 
 <br>
 
 # Features 
->- ### __Experience bar__  
->- ### __Countdown timer__ 
->- ### __Levels__ 
->- ### __Notifications__ 
->- ### __Simple Authentication with (using github username)__ 
+>- #### __Experience bar__  
+>- #### __Countdown timer__ 
+>- #### __Levels__ 
+>- #### __Notifications__ 
+>- #### __Simple Authentication with (using github username)__ 
 
 <br>
 
 # Technologies used
 
-> ### 1. __Next.JS__
-> ### 2. __REACTJS__
+> #### 1. __Next.JS__
+> #### 2. __REACTJS__
 
 <br>
 
 # Concepts used in in this application
 
-> ### 1. __Context API__
-> ### 2. __getServerSideProps__
-> ### 3. __Styled-components__
-> ### 4. __Audio API__
-> ### 5. __Notification API__
-> ### 6. __Test with Jest__
-> ### 7. __TypeScript__
+> #### 1. __Context API__
+> #### 2. __getServerSideProps__
+> #### 3. __Styled-components__
+> #### 4. __Audio API__
+> #### 5. __Notification API__
+> #### 6. __Test with Jest__
+> #### 7. __TypeScript__
 
 <br>
 
 # Development 
 
-> ### 1. __Eslint__
-> ### 2. __Prettier__ 
+> #### 1. __Eslint__
+> #### 2. __Prettier__ 
