@@ -1,21 +1,21 @@
 // eslint-disable-next-line import/no-cycle
-import { LevelUpModal } from '@components/LevelUpModal';
+import LevelUpModal from '@components/LevelUpModal';
 import Cookies from 'js-cookie';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 
 import challenges from '../../challenges.json';
 
-interface Challenge {
+export interface IChallenge {
   type: 'body' | 'eye';
   description: string;
   amount: number;
 }
 
-interface ChallengesContextData {
+export interface IChallengesContextData {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
-  activeChallenge: Challenge;
+  activeChallenge: IChallenge;
   experienceToNextLevel: number;
   levelUp: () => void;
   startNewChallenge: () => void;
@@ -24,14 +24,14 @@ interface ChallengesContextData {
   closeLevelUpModal: () => void;
 }
 
-interface ChallengesProviderProps {
+export interface ChallengesProviderProps {
   children: ReactNode;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
 }
 
-export const ChallengeContext = createContext<ChallengesContextData>({} as ChallengesContextData);
+export const ChallengeContext = createContext<IChallengesContextData>({} as IChallengesContextData);
 
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
   const [level, setLevel] = useState(rest.level ?? 1);

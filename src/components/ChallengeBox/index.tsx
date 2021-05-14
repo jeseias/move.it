@@ -27,8 +27,12 @@ export default function ChallengeBox() {
         <ChallengeActive>
           <header>Win {activeChallenge.amount} xp</header>
           <main>
-            {activeChallenge.type === 'body' && <CgGym size={60} />}
-            {activeChallenge.type === 'eye' && <ImEye size={60} />}
+            {activeChallenge.type === 'body' && (
+              <CgGym size={60} role="img" aria-label="body gym image" />
+            )}
+            {activeChallenge.type === 'eye' && (
+              <ImEye size={60} role="img" aria-label="eye image" />
+            )}
             <strong>New Challenge</strong>
             <p>{activeChallenge.description}</p>
           </main>
