@@ -1,19 +1,29 @@
 import { ChallengeContext } from '@contexts/ChallengesContexts';
+import { getLoggedUser } from '@utils';
 import { ICurrentUser } from '@views/Home/home.types';
-import Cookies from 'js-cookie';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { Container } from './styles';
 
 export default function Profile() {
   const { level } = useContext(ChallengeContext);
-  const currentUser: ICurrentUser = JSON.parse(Cookies.get('currentUser'));
+  const [user, setUser] = useState<ICurrentUser>({} as ICurrentUser);
+
+  useEffect(() => {
+    const currentUser = getLoggedUser();
+    setUser(currentUser);
+
+    console.log('The current user is', user);
+  }, []);
 
   return (
     <Container>
-      <img src={`https://github.com/${currentUser.login}.png`} alt={currentUser.name} />
+      <img
+        src={`https://github.com/${(user && user.login) || null}.png`}
+        alt={(user && user.name) || 'No user found'}
+      />
       <div>
-        <strong>{currentUser.name}</strong>
+        <strong>{(user && user.name) || 'No User Found'}</strong>
         <p>Level {level}</p>
       </div>
     </Container>

@@ -72,6 +72,31 @@ export const Container = styled.div`
       }
     }
 
+    button.test-app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+
+      font-size: 0.5rem;
+      background: var(--title);
+      color: var(--white);
+      border-radius: 100%;
+      width: 3rem;
+      height: 3rem;
+      font-weight: 600;
+
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background: var(--blue);
+        cursor: pointer;
+      }
+    }
+
     p {
       font-size: 0.8rem;
     }

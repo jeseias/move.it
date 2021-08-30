@@ -27,6 +27,7 @@
       "@styles-components/*": ["./styles/components/*"],
       "@contexts/*": ["./contexts/*"],
       "@test-utils": ["./modules/test-utils.tsx"],
+      "@utils": ["./modules/utils.ts"]
     }
   },
   "include": [

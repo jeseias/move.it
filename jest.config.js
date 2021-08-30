@@ -9,6 +9,7 @@ module.exports = {
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
   moduleNameMapper: {
     "@test-utils": "<rootDir>/src/modules/test-utils.tsx",
+    "@utils": "<rootDir>/src/modules/utils.ts",
     "@styles/(.*)": "<rootDir>/src/styles/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",
     "@pages/(.*)": "<rootDir>/src/pages/$1",

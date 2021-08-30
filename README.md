@@ -16,6 +16,7 @@
 >- #### __Levels__ 
 >- #### __Notifications__ 
 >- #### __Simple Authentication with (using github username)__ 
+>- #### __Test Mode (U don't really need to be authenticated to use the app)__ 
 
 # Technologies used
 

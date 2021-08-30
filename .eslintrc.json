@@ -14,7 +14,8 @@
           ["@styles-pages", "./src/styles/pages"],
           ["@styles-components", "./src/styles/components"],
           ["@contexts", "./src/contexts"],
-          ["@test-utils", "./src/modules/test-utils"]
+          ["@test-utils", "./src/modules/test-utils"],
+          ["@utils", "./src/modules/utils"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }

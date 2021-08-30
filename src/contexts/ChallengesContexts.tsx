@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import LevelUpModal from '@components/LevelUpModal';
+import { getLoggedUser, isUserLogged } from '@utils';
 import Cookies from 'js-cookie';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 
@@ -24,8 +25,15 @@ export interface IChallengesContextData {
   closeLevelUpModal: () => void;
 }
 
-export interface ChallengesProviderProps {
+export interface IChallengesProviderProps {
   children: ReactNode;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
+
+interface IUserData {
+  name: string;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
@@ -33,7 +41,7 @@ export interface ChallengesProviderProps {
 
 export const ChallengeContext = createContext<IChallengesContextData>({} as IChallengesContextData);
 
-export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
+export function ChallengesProvider({ children, ...rest }: IChallengesProviderProps) {
   const [level, setLevel] = useState(rest.level ?? 1);
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
   const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
@@ -47,9 +55,27 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
   }, []);
 
   useEffect(() => {
-    Cookies.set('level', String(level));
-    Cookies.set('currentExperience', String(currentExperience));
-    Cookies.set('challengesCompleted', String(challengesCompleted));
+    if (isUserLogged()) {
+      const user = getLoggedUser();
+      const thisUserData: IUserData = {
+        name: user.login,
+        level,
+        currentExperience,
+        challengesCompleted,
+      };
+
+      const allUserData = JSON.parse(Cookies.get('move.it.DB')) as IUserData[];
+
+      const newAllUserData = allUserData.map(item => {
+        if (item.name === thisUserData.name) {
+          item = thisUserData;
+        }
+
+        return item;
+      });
+
+      Cookies.set('move.it.DB', JSON.stringify(newAllUserData));
+    }
   }, [level, currentExperience, challengesCompleted]);
 
   function levelUp() {

@@ -24,7 +24,7 @@ export default function Home() {
       Cookies.set('currentUser', JSON.stringify(currentUser));
       router.push('/app');
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   }
 
@@ -44,6 +44,9 @@ export default function Home() {
           />
           <button type="button" onClick={loginUser}>
             <MdInput size={30} />
+          </button>
+          <button type="button" className="test-app" onClick={() => router.push('/app')}>
+            TEST <br /> APP
           </button>
         </div>
         <p>Develop by JESEIAS</p>
